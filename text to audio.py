@@ -1,6 +1,8 @@
-from gtts import gTTS
-from playsound import playsound
-text=input("Enter a sentence (In English) : ") #Taking user input
-speech=gTTS(text=text,lang="en")        #converting to mp3 in English
-speech.save(r"C:\Users\jouha\Desktop\jou.mp3")        #saving the .mp3 file in the given directory
-playsound(r"C:\Users\jouha\Desktop\jou.mp3")          
+import pyttsx3  
+# initialize Text-to-speech engine  
+engine = pyttsx3.init()  
+# convert this text to speech  
+text = input("enter your sentence: ")
+engine.say(text)  
+# play the speech  
+engine.runAndWait()        
